@@ -9,7 +9,7 @@ if  (($numero %2 == 0))
 then
   echo "El número es par."
 else
-  echo "Introduce un número válido."
+  echo "Introduce un número par"
 fi
 else
 echo "El numero no es mayor que 0"
