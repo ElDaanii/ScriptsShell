@@ -1,21 +1,26 @@
 #!/bin/bash
 
-echo "Total de litros de agua consumidos"
-read litros
+echo "Introduce un numero"
+read n1
 
-if [ $litros -gt 0 ]; then
-    if [ $litros -le 50 ]; then
-        echo "El precio es de 20€"
-        elif [ $litros -le 200 ]; then
-        coste=$((litros * 0,20))
-        costetot=$((litros + coste))
-        echo  "El precio es de $costetot"
+echo "Introduce otro numero"
+read n2
 
-        else
-        coste2=$((litros * 0,10))
-        costetot2=$((litros + coste2))
-        echo ""El precio es de $costetot2""
-    fi
-else
-echo ""Introduce un numero mayor que 0
+echo "Introduce la operacion (+, -, *, / )" 
+read operacion
+
+if [ $operacion == "+" ]; then
+suma=$(( n1 + n2))
+echo "El resultado es $suma"
+elif [ $operacion == "-" ]; then
+resta=$(( n1 - n2))
+echo "El resultado es $resta"
+elif [ $operacion == "*" ]; then
+mult=$(( n1 * n2))
+echo "El resultado es $mult"
+elif [ $operacion == "/" ]; then
+divi=$(( n1 / n2))
+echo "El resultado es $divi"
+else 
+echo "Introduce un operador valido"
 fi
