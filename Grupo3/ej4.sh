@@ -19,8 +19,12 @@ elif [ $operacion == "*" ]; then
 mult=$(( n1 * n2))
 echo "El resultado es $mult"
 elif [ $operacion == "/" ]; then
-divi=$(( n1 / n2))
-echo "El resultado es $divi"
+ if [ $n1 -eq 0 ] || [ $n2 -eq 0 ]; then
+    echo "No puedes dividir entre 0"
+    else
+    divi=$(( n1 / n2))
+    echo "El resultado es $divi"
+fi
 else 
 echo "Introduce un operador valido"
 fi
